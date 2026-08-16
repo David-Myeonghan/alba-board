@@ -5,6 +5,13 @@ export interface Wage {
   amount: number
 }
 
+/** 임금 유형의 화면 표기 라벨 */
+export const wageTypeLabel: Record<WageType, string> = {
+  HOURLY: '시급',
+  MONTHLY: '월급',
+  PER_TASK: '건별',
+}
+
 export interface Job {
   id: string
   title: string

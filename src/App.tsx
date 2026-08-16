@@ -1,5 +1,14 @@
+import { Route, Routes } from 'react-router-dom'
+import { JobDetail } from './pages/JobDetail'
+import { JobList } from './pages/JobList'
+
 function App() {
-  return <h1>동네 알바 보드</h1>
+  return (
+    <Routes>
+      <Route path="/" element={<JobList />} />
+      <Route path="/jobs/:id" element={<JobDetail />} />
+    </Routes>
+  )
 }
 
 export default App
