@@ -1,32 +1,19 @@
-# React + TypeScript + Vite
+# 동네 알바 보드 (alba-board)
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+동네 알바 구인 공고를 목록과 상세 화면으로 보여주는 데모 웹앱입니다.
+목 데이터(`src/data/jobs.ts`) 기반이며 서버가 없습니다.
 
-Currently, two official plugins are available:
+## 실행
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+```bash
+pnpm install
+pnpm dev
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+## 검사
+
+```bash
+pnpm test       # Vitest 단위 테스트
+pnpm typecheck  # tsc --noEmit 타입 검사
+pnpm lint       # ESLint
+```
