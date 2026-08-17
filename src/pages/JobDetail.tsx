@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
+import { WageCalculator } from '../components/WageCalculator'
 import { WageInfo } from '../components/WageInfo'
 import { BottomSheet } from '../components/ui/BottomSheet'
 import { Button } from '../components/ui/Button'
@@ -47,6 +48,7 @@ export function JobDetail() {
         weeklyHours={job.weeklyHours}
         workDays={job.workDays}
       />
+      <WageCalculator job={job} />
       <section>
         <h2 style={{ fontSize: '16px', marginBottom: 'var(--space-2)' }}>상세 내용</h2>
         <p style={{ margin: 0, whiteSpace: 'pre-line' }}>{job.description}</p>
