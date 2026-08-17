@@ -14,4 +14,8 @@ describe('formatCurrency', () => {
     expect(formatCurrency(0)).toBe('0원')
     expect(formatCurrency(500)).toBe('500원')
   })
+
+  it('소수점 금액은 원 단위로 반올림해 표기한다', () => {
+    expect(formatCurrency(10320.5)).toBe('10,321원')
+  })
 })
